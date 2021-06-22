@@ -41,7 +41,7 @@ $matches = [
     ]
 ];
 
-echo "<h1> snack 1</h1>";
+echo "<hr> <h1> snack 1</h1> ";
 
  foreach($matches as $match){
     echo "<p>" . $match['home_team'] . " - " . $match['away_team'] . " | " . $match['home_points'] . "-" . $match['away_points'] . "</p>";  
@@ -54,7 +54,7 @@ echo "<h1> snack 1</h1>";
 Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 */
-echo "<h1> snack 2</h1>";
+echo "<hr> <h1> snack 2</h1> ";
 ?>
 <form action="" method="get">
     <input type="text" name="name"> <br>
@@ -76,7 +76,7 @@ if(strlen($name)>2 && strpos($mail, '@') && strpos($mail, '.')){
 /*Snack 3
 Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
 Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z */
-echo "<h1> snack 3</h1>";
+echo "<hr> <h1> snack 3</h1> ";
 
 $posts = [
 
@@ -134,7 +134,7 @@ for($k=0; $k<count($posts) ; $k++){
 
 /*Snack 4
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta*/
-echo "<h1> snack 4</h1>";
+echo "<hr> <h1> snack 4</h1> ";
 
 $random_numbers=[];
 while(count($random_numbers)<15){
@@ -151,7 +151,7 @@ var_dump($random_numbers);
 
 /*Snack 5
 Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.*/
-echo "<h1> snack 5</h1>";
+echo "<hr> <h1> snack 5</h1> ";
 
 $text = "Sale la nebbia sui prati bianchi
 come un cipresso nei camposanti
@@ -195,7 +195,7 @@ foreach($paragraphs as $paragraph){
 /*Snack 6
 Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde.*/
 
-echo "<h1> snack 6</h1>";
+echo "<hr> <h1> snack 6</h1> ";
 
 $db = [
     'teachers' => [
@@ -242,7 +242,47 @@ for($i=0; $i<count($db);$i++){
 
 /*Snack 7
 Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.*/
+echo "<hr> <h1> snack 7</h1>  ";
 
+$students=[
+    [
+        'name'=>'Franco',
+        'lastname'=>'neri',
+        'voti' =>[
+            'matematica' => 6,
+            'storia' => 8,
+            'inglese' => 7,
+            'italiano'=>9
+        ]
+    ],
+
+    [
+        'name'=>'Franca',
+        'lastname'=>'rosa',
+        'voti' =>[
+            'matematica' => 5,
+            'storia' => 9,
+            'inglese' => 4,
+         'italiano'=>7
+        ]
+    ],
+
+    [
+        'name'=>'Franchi',
+        'lastname'=>'nero',
+        'voti' =>[
+            'matematica' => 3,
+            'storia' => 10,
+            'inglese' => 6,
+            'italiano'=>2
+        ]
+    ]
+];
+foreach($students as $student){
+    $media = array_sum($student['voti'])/4;
+    echo "<p>" . $student['name'] . " " . $student['lastname'] . "</p>";
+    echo "<p> la media scolastiaca è: " . $media . "</p>";
+};
 
 ?>
     
