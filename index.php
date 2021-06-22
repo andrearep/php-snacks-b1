@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php
@@ -75,6 +76,7 @@ if(strlen($name)>2 && strpos($mail, '@') && strpos($mail, '.')){
 /*Snack 3
 Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
 Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z */
+echo "<h1> snack 3</h1>";
 
 $posts = [
 
@@ -115,10 +117,10 @@ $posts = [
         ]
     ],
 ];
-echo $posts['15/05/2019']['title'];
+
 $dates=array_keys($posts);
 for($k=0; $k<count($posts) ; $k++){
-    echo $k;
+   
     echo "<p>" . $dates[$k] . "</p>";
     foreach($posts[$dates[$k]] as $post){
       
@@ -132,6 +134,8 @@ for($k=0; $k<count($posts) ; $k++){
 
 /*Snack 4
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta*/
+echo "<h1> snack 4</h1>";
+
 $random_numbers=[];
 while(count($random_numbers)<15){
     $rand_num= rand(0,100);
@@ -147,6 +151,8 @@ var_dump($random_numbers);
 
 /*Snack 5
 Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.*/
+echo "<h1> snack 5</h1>";
+
 $text = "Sale la nebbia sui prati bianchi
 come un cipresso nei camposanti
 un campanile che non sembra vero
@@ -189,6 +195,50 @@ foreach($paragraphs as $paragraph){
 /*Snack 6
 Utilizzare questo array: https://pastebin.com/CkX3680A. Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde.*/
 
+echo "<h1> snack 6</h1>";
+
+$db = [
+    'teachers' => [
+        [
+            'name' => 'Michele',
+            'lastname' => 'Papagni'
+        ],
+        [
+            'name' => 'Fabio',
+            'lastname' => 'Forghieri'
+        ]
+    ],
+    'pm' => [
+        [
+            'name' => 'Roberto',
+            'lastname' => 'Marazzini'
+        ],
+        [
+            'name' => 'Federico',
+            'lastname' => 'Pellegrini'
+        ]
+    ]
+];
+
+$element=array_keys($db);
+for($i=0; $i<count($db);$i++){
+    if($i==0){
+        echo '<div class="grey">';
+        foreach($db[$element[$i]] as $teacher){
+            echo "<p>" . $teacher['name'] . "</p>";
+            echo "<p>" . $teacher['lastname'] . "</p>";
+        };
+    }else if($i==1){
+
+        echo '<div class="green">';
+        foreach($db[$element[$i]] as $pm){
+         
+            echo "<p>" . $pm['name'] . "</p>";
+            echo "<p>" . $pm['lastname'] . "</p>";
+        }; 
+    };
+    echo "</div>";
+};
 
 /*Snack 7
 Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.*/
