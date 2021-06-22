@@ -40,6 +40,7 @@ $matches = [
     ]
 ];
 
+echo "<h1> snack 1</h1>";
 
  foreach($matches as $match){
     echo "<p>" . $match['home_team'] . " - " . $match['away_team'] . " | " . $match['home_points'] . "-" . $match['away_points'] . "</p>";  
@@ -52,9 +53,26 @@ $matches = [
 Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 */
+echo "<h1> snack 2</h1>";
+?>
+<form action="" method="get">
+    <input type="text" name="name"> <br>
+    <input type="text" name="mail"> <br>
+    <input type="number" name="age"> <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<?php
+$name= $_GET['name'];
+$mail = $_GET['mail'];
+$age= $_GET['age'];
 
 
-/*Snack 3
+if(strlen($name)>2 && strpos($mail, '@') && strpos($mail, '.')){
+    echo "Accesso riuscito";
+};
+/*Snack 
 Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
 Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z */
 /*Snack 4
