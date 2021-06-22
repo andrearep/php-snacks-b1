@@ -147,6 +147,43 @@ var_dump($random_numbers);
 
 /*Snack 5
 Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.*/
+$text = "Sale la nebbia sui prati bianchi
+come un cipresso nei camposanti
+un campanile che non sembra vero
+segna il confine fra la terra e il cielo.
+
+Ma tu che vai, ma tu rimani
+vedrai la neve se ne andrà domani
+rifioriranno le gioie passate
+
+col vento caldo di un'altra estate.
+
+Anche la luce sembra morire
+nell'ombra incerta di un divenire
+dove anche l'alba diventa sera
+e i volti sembrano teschi di cera.
+
+Ma tu che vai, ma tu rimani
+anche la neve morirà domani
+l'amore ancora ci passerà vicino
+nella stagione del biancospino.
+
+La terra stanca sotto la neve
+dorme il silenzio di un sonno greve
+l'inverno raccoglie la sua fatica
+di mille secoli, da un'alba antica.
+
+Ma tu che stai, perché rimani?
+Un altro inverno tornerà domani
+cadrà altra neve a consolare i campi
+cadrà altra neve sui camposanti.";
+
+$paragraphs=explode('.', $text);
+foreach($paragraphs as $paragraph){
+    echo "<p>" . $paragraph . "</p>";
+};
+
+
 
 
 /*Snack 6
