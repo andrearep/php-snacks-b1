@@ -129,8 +129,20 @@ for($k=0; $k<count($posts) ; $k++){
         echo "</div>";
     };
 };
+
 /*Snack 4
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta*/
+$random_numbers=[];
+while(count($random_numbers)<15){
+    $rand_num= rand(0,100);
+    
+    if (!(in_array($rand_num, $random_numbers))){
+        $random_numbers[] = $rand_num; 
+       
+    };
+};
+var_dump($random_numbers);
+
 
 
 /*Snack 5
