@@ -141,7 +141,7 @@ while(count($random_numbers)<15){
     $rand_num= rand(0,100);
     
     if (!(in_array($rand_num, $random_numbers))){
-        $random_numbers[] = $rand_num; 
+        $random_numbers[] = $rand_num;
        
     };
 };
@@ -232,7 +232,6 @@ for($i=0; $i<count($db);$i++){
 
         echo '<div class="green">';
         foreach($db[$element[$i]] as $pm){
-         
             echo "<p>" . $pm['name'] . "</p>";
             echo "<p>" . $pm['lastname'] . "</p>";
         }; 

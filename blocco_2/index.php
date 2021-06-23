@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-
+/* 
 $ads = [
     [
         'image_path' => 'https://conversionsciences.com/wp-content/uploads/2019/04/example-of-emotional-logical-appeal-on-persuasive-copy.jpg',
@@ -49,10 +49,18 @@ foreach ($ads as $ad) {
     }
 }
 
+ */
+
+
+/**/ 
 
 ?>
 <!-- stampiamo a schermo la pubblicità casuale -->
-    <img src="<?php echo $ads_act[$number]['image_path']; ?>" alt="">
-
+  <!--   <img src="<?php //echo $ads_act[$number]['image_path']; ?>" alt=""> -->
+ <!--  snack 2 -->
+  <form action="page_2.php" method="get">
+<input type="text" name="name" placeholder="nome invitato">
+<input type="submit"  value="Submit">Submit</input>
+</form>
 </body>
 </html>
